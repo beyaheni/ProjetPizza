@@ -1,7 +1,6 @@
 PIZZA RESTAURANT 
 
-![Delicious Pizza](pizza.png)
-<img src="pizza.png" width="400">
+<img src="pizza.png" width="500">
 
 Our website offers a unique experience for pizza
 lovers! They’re served at nearby restaurants. You can
