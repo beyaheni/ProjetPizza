@@ -5,13 +5,27 @@
 </p>
 
 <p align="center">
-  Our website offers a unique experience for pizza lovers! They’re served at nearby restaurants. You can suggest new pizza creations, add pizzas and restd information about each restaurant where your favorite slices are available. Plus, our search feature lets you quickly find any pizza you're craving. Dive into the world of pizzas with us and enjoy a seamless, interactive way to enhance your dining and tasting adventures!
+  Welcome to <strong>Pizza Restaurant</strong> — the ultimate digital hub for every pizza lover!  
+  Here, we combine passion, flavor, and technology to bring you the most delicious experience online.  
+  Whether you’re craving a classic Margherita, an indulgent 4 Fromages, or want to invent your own creation,  
+  our platform makes it all possible.  
+</p>
+
+
+<p align="center">
+  <strong>Because every slice tells a story — and yours is waiting to be shared.</strong>
 </p>
 
 <p align="center">
-  <strong>Create it, enjoy it !</strong>
+  Our project aims to offer a smooth, visually appealing and interactive web experience.  
+  With an intuitive interface built in Vue.js, dynamic animations, and a database ready for expansion,  
+  <em>Pizza Restaurant</em> is more than a website — it’s a celebration of flavor, creativity, and community.
 </p>
 
 <p align="center">
-  <em>Hadile KERRIT, Beya HENI, Hugo MOCHET</em>
+  <strong>Create it, taste it, share it — enjoy it!</strong>
+</p>
+
+<p align="center">
+  <em>By Hadile KERRIT · Beya HENI · Hugo MOCHET</em>
 </p>
