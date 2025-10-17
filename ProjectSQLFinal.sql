@@ -144,17 +144,17 @@ INSERT INTO PIZZA (Name, Category, PreparationTime, Difficulty, Size) VALUES
 
 
 -- Insert data for PIZZA_INGREDIENTS
-INSERT INTO CONTAIN (PizzaID, IngredientID, Quantity) VALUES
-    (1, 1, 1.5),
-    (1, 2, 1.5),
-    (2, 2, 1.2),
-    (3, 3, 2.5),
-    (4, 4, 1.0),
-    (4, 5, 3.5),
-    (5, 6, 2.0),
-    (6, 7, 1.5),
-    (7, 8, 0.5),
-    (8, 9, 1.0);
+INSERT INTO CONTAIN (PizzaID, IngredientID, Quantity? PreparationNote) VALUES
+    (1, 1, 1.5, 'Bake until the crust is golden but not burnt.'),
+    (1, 2, 1.5, 'Roll the dough thin, Italian-style.'),
+    (2, 2, 1.2, ' With the edges slightly thicker.'),
+    (3, 3, 2.5, 'Sprinkle some parmesan after baking.'),
+    (4, 4, 1.0, 'Add fresh basil after baking.'),
+    (4, 5, 3.5, 'Finish with a pinch of oregano before serving.'),
+    (5, 6, 2.0, 'Sprinkle some parmesan after baking.'),
+    (6, 7, 1.5, 'Need the pizza dough a little raw.'),
+    (7, 8, 0.5, 'Add hot sauce after cooking.'),
+    (8, 9, 1.0, 'Bake until the crust is golden a little bit.');
 
 
 INSERT INTO CREATES (User_ID, PizzaID, Price) VALUES
