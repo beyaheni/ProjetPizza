@@ -1,4 +1,5 @@
-# ProjetPizza
+PIZZA RESTAURANT 
+
 Our website offers a unique experience for pizza
 lovers! They’re served at nearby restaurants. You can
 suggest new pizza creations, add pizzas and restd
@@ -8,3 +9,7 @@ lets you quickly find any pizza you're craving.
 Dive into the world of pizzas with us and enjoy a
 seamless, interactive way to enhance your dining and
 tasting adventures!
+
+Create it, enjoy it !
+
+Hadile KERRIT, Beya HENI, Hugo MOCHET
