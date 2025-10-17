@@ -1,5 +1,7 @@
 PIZZA RESTAURANT 
 
+![Delicious Pizza](pizza.png)
+
 Our website offers a unique experience for pizza
 lovers! They’re served at nearby restaurants. You can
 suggest new pizza creations, add pizzas and restd
