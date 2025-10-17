@@ -1,22 +1,40 @@
-# Node / Vue
 node_modules/
 dist/
 .cache/
-.temp/
+.env.local
+.env.*.local
+
+# build files / logs
 npm-debug.log*
 yarn-debug.log*
-pnpm-debug.log*
+yarn-error.log*
 
-# Editors
-.vscode/*
-!.vscode/extensions.json
-.idea/
-*.iml
+# VS Code settings
+.vscode/
 
-# OS
+# System files (Mac/Windows)
 .DS_Store
 Thumbs.db
 
-# Env / local
-.env
-.env.*
+
+*.sql~
+*.sqlite
+*.db
+__pycache__/
+*.pyc
+
+# backups
+*.bak
+*.tmp
+
+
+# big images or design exports
+*.psd
+*.ai
+*.xcf
+
+# local export folders
+export/
+backup/
+temp/
+
