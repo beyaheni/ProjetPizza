@@ -1,12 +1,10 @@
-/# Node / Vue
+# Node / Vue
 node_modules/
 dist/
 .cache/
 .temp/
-.npm/
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 
 # Editors
