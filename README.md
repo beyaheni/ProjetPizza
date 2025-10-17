@@ -11,6 +11,13 @@
   our platform makes it all possible.  
 </p>
 
+<p align="center">
+  🍅 Discover the ingredients, origins, and stories behind each pizza.<br>
+  🧀 Explore nearby restaurants serving your favorites.<br>
+  🍕 Add your own recipes, photos, and ideas to inspire the community.<br>
+  🔍 Use our smart search to instantly find the pizza that fits your mood.<br>
+  ❤️ Save and share your personal favorites with friends.
+</p>
 
 <p align="center">
   <strong>Because every slice tells a story — and yours is waiting to be shared.</strong>
