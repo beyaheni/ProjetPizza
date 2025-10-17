@@ -5,28 +5,41 @@
 </p>
 
 <p align="center">
-  Welcome to <strong>Pizza Restaurant</strong> — the ultimate digital hub for every pizza lover!  
-  Here, we combine passion, flavor, and technology to bring you the most delicious experience online.  
-  Whether you’re craving a classic Margherita, an indulgent 4 Fromages, or want to invent your own creation,  
-  our platform makes it all possible.  
+  Welcome to <strong>Pizza Restaurant</strong> — the ultimate destination for every pizza enthusiast!  
+  Our platform brings together the passion of food, the joy of discovery, and the simplicity of technology  
+  to create a one-of-a-kind online experience for pizza lovers worldwide.
 </p>
 
 <p align="center">
-  🍅 Discover the ingredients, origins, and stories behind each pizza.<br>
-  🧀 Explore nearby restaurants serving your favorites.<br>
-  🍕 Add your own recipes, photos, and ideas to inspire the community.<br>
-  🔍 Use our smart search to instantly find the pizza that fits your mood.<br>
-  ❤️ Save and share your personal favorites with friends.
+  🍅 Explore hundreds of pizzas from classic recipes to bold new flavors.<br>
+  🧀 Find out which restaurants near you serve your favorite slices.<br>
+  🍕 Suggest and customize your own pizza creations to share with others.<br>
+  🔍 Use our smart search bar to quickly locate any pizza or restaurant.<br>
+  📸 Add photos, comments, and ratings to make the experience more personal.<br>
+  ❤️ Save your top picks and share them with your friends or family.
 </p>
 
 <p align="center">
-  <strong>Because every slice tells a story — and yours is waiting to be shared.</strong>
+  <strong>Because pizza is more than food — it’s an emotion, a community, and a lifestyle.</strong>
 </p>
 
 <p align="center">
-  Our project aims to offer a smooth, visually appealing and interactive web experience.  
-  With an intuitive interface built in Vue.js, dynamic animations, and a database ready for expansion,  
-  <em>Pizza Restaurant</em> is more than a website — it’s a celebration of flavor, creativity, and community.
+  <em>Pizza Restaurant</em> is designed to be simple, fast, and fun.  
+  Built using the modern <strong>Vue.js</strong> framework, it offers a smooth, responsive interface  
+  and an attractive layout that adapts perfectly to any device — from mobile to desktop.  
+  The current version uses <strong>fake JSON data</strong> to simulate restaurant and pizza listings,  
+  but will soon connect to a real database (SQL) for live content and user submissions.
+</p>
+
+<p align="center">
+  Beyond being a website, our project is also an invitation to share your creativity.  
+  Each user can contribute to the ever-growing catalog of pizzas,  
+  helping us build a living, evolving community united by flavor and innovation.
+</p>
+
+<p align="center">
+  <strong>🌍 Vision:</strong> to make every pizza in the world just one click away.  
+  <strong>🎯 Mission:</strong> to blend technology and taste into a simple, joyful experience.  
 </p>
 
 <p align="center">
@@ -34,5 +47,5 @@
 </p>
 
 <p align="center">
-  <em>By Hadile KERRIT · Beya HENI · Hugo MOCHET</em>
+  <em>Developed with passion by Hadile KERRIT · Beya HENI · Hugo MOCHET</em>
 </p>
