@@ -1,0 +1,14 @@
+[
+  { "id": 101, "name": "Seijitsu Pizza", "city": "Paris", "rating": 4.7 },
+  { "id": 102, "name": "Pizza della Nonna", "city": "Lyon", "rating": 4.5 },
+  { "id": 103, "name": "Bella Napoli", "city": "Marseille", "rating": 4.3 },
+  { "id": 104, "name": "La Fornata", "city": "Toulouse", "rating": 4.6 },
+  { "id": 105, "name": "Corte dei Sapori", "city": "Nice", "rating": 4.4 },
+  { "id": 106, "name": "Massa e Farina", "city": "Bordeaux", "rating": 4.2 },
+  { "id": 107, "name": "Il Forno Rosso", "city": "Nantes", "rating": 4.1 },
+  { "id": 108, "name": "Via Roma", "city": "Strasbourg", "rating": 4.5 },
+  { "id": 109, "name": "Trastevere", "city": "Montpellier", "rating": 4.0 },
+  { "id": 110, "name": "Piazza Grande", "city": "Lille", "rating": 4.6 },
+  { "id": 111, "name": "O Sole Mio", "city": "Rennes", "rating": 4.3 },
+  { "id": 112, "name": "La Pala Gourmet", "city": "Grenoble", "rating": 4.2 }
+]

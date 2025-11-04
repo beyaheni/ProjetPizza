@@ -1,25 +1,21 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
+
+// Accueil (ta page d'origine)
 import HomeView from '../views/HomeView.vue'
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+// Pages liste
+import PizzaList from '../views/PizzaList.vue'
+import RestaurantList from '../views/RestaurantList.vue'
+import OrdersList from '../views/OrdersList.vue'
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+export default createRouter({
+  history: createWebHashHistory(),
+  routes: [
+    { path: '/', name: 'home', component: HomeView },          // 👈 Accueil revenu
+    { path: '/pizzas', name: 'pizzas', component: PizzaList },
+    { path: '/restaurants', name: 'restaurants', component: RestaurantList },
+    { path: '/orders', name: 'orders', component: OrdersList },
+    // 404 simple
+    { path: '/:pathMatch(.*)*', name: 'not-found', component: { render: () => '404' } }
+  ]
 })
-
-export default router

@@ -2,32 +2,20 @@
   <div id="app">
     <nav class="navbar">
       <router-link to="/">Accueil</router-link>
-      <router-link to="/pizzas">Nos Pizzas</router-link>
-      <router-link to="/contact">Contact</router-link>
+      <router-link to="/pizzas">Pizzas</router-link>
+      <router-link to="/restaurants">Restaurants</router-link>
+      <router-link to="/orders">Commandes</router-link>
     </nav>
     <router-view />
   </div>
 </template>
 
 <script>
-export default { name: "App" };
+export default { name: 'App' }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
-}
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  background-color: #ffcc00;
-}
-.navbar a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
+<style scoped>
+.navbar{ display:flex; gap:1rem; justify-content:center; background:#ffe082; padding:1rem }
+.router-link-active{ font-weight:700; color:#d32f2f }
 </style>
+
