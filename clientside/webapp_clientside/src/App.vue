@@ -1,6 +1,7 @@
 <template>
   <div id="app">
 
+<<<<<<< HEAD
     <!-- ✅ NAVBAR -->
     <nav class="navbar">
 
@@ -26,6 +27,23 @@
     </nav>
 
     <!-- ✅ PAGE CONTENT -->
+=======
+    <!-- NAVBAR PRINCIPALE -->
+    <nav class="navbar">
+      <router-link to="/">Accueil</router-link>
+      <router-link to="/pizzas">Pizzas</router-link>
+      <router-link to="/restaurants">Restaurants</router-link>
+      <router-link to="/orders">Commandes</router-link>
+
+      <span class="admin-title">ADMIN</span>
+
+      <router-link to="/gestion-pizzas" class="admin-link">Pizzas</router-link>
+      <router-link to="/gestion-restaurants" class="admin-link">Restaurants</router-link>
+      <router-link to="/gestion-orders" class="admin-link">Commandes</router-link>
+    </nav>
+
+    <!-- PAGE COURANTE -->
+>>>>>>> 509f02c2044908ef1fcb89275c7819e564f4996f
     <main>
       <router-view />
     </main>
@@ -34,6 +52,7 @@
 </template>
 
 <script setup>
+<<<<<<< HEAD
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 
@@ -88,12 +107,47 @@ body {
   color: #5c3b00;
   font-weight: bold;
   text-decoration: none;
+=======
+// pas de logique ici
+</script>
+
+<style src="./assets/admin.css"></style>
+
+
+<style>
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+}
+
+#app {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #fbdc7c;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 18px;
+  border-bottom: 2px solid #e1c25a;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #5c3b00;
+  font-weight: bold;
+>>>>>>> 509f02c2044908ef1fcb89275c7819e564f4996f
 }
 
 .navbar a:hover {
   text-decoration: underline;
 }
 
+<<<<<<< HEAD
 /* USER SECTION */
 .user-section {
   display: flex;
@@ -137,6 +191,19 @@ body {
 .login-link:hover,
 .logout-btn:hover {
   background: #6b2323;
+=======
+/* ADMIN */
+.admin-title {
+  margin-left: 30px;
+  margin-right: 10px;
+  color: #8f2e2e;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.admin-link {
+  color: #8f2e2e !important;
+>>>>>>> 509f02c2044908ef1fcb89275c7819e564f4996f
 }
 
 main {
