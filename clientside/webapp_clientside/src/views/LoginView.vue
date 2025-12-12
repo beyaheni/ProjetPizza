@@ -63,6 +63,8 @@ export default {
 
         localStorage.setItem("token", res.token);
         localStorage.setItem("user", JSON.stringify(res.user));
+        // notify app about auth change
+        window.dispatchEvent(new CustomEvent('auth-changed'))
 
         this.$router.push("/admin/pizzas");
       } catch (err) {

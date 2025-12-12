@@ -1,8 +1,7 @@
 <template>
   <div id="app">
 
-<<<<<<< HEAD
-    <!-- ✅ NAVBAR -->
+    <!-- NAVBAR -->
     <nav class="navbar">
 
       <div class="nav-left">
@@ -16,9 +15,11 @@
         <div v-if="user" class="user-section">
           <span class="user-name">👤 {{ user.email }}</span>
           <span class="admin-label" v-if="user.role === 'admin'">ADMIN</span>
-          <router-link to="/admin/pizzas" class="admin-link" v-if="user.role === 'admin'">
-            Dashboard
-          </router-link>
+          <div v-if="user.role === 'admin'" class="admin-links">
+            <router-link to="/admin/pizzas" class="admin-link">Pizzas</router-link>
+            <router-link to="/admin/restaurants" class="admin-link">Restaurants</router-link>
+            <router-link to="/admin/orders" class="admin-link">Orders</router-link>
+          </div>
           <button @click="logout" class="logout-btn">Sign out</button>
         </div>
         <router-link v-else to="/login" class="login-link">Sign in</router-link>
@@ -26,24 +27,7 @@
 
     </nav>
 
-    <!-- ✅ PAGE CONTENT -->
-=======
-    <!-- NAVBAR PRINCIPALE -->
-    <nav class="navbar">
-      <router-link to="/">Accueil</router-link>
-      <router-link to="/pizzas">Pizzas</router-link>
-      <router-link to="/restaurants">Restaurants</router-link>
-      <router-link to="/orders">Commandes</router-link>
-
-      <span class="admin-title">ADMIN</span>
-
-      <router-link to="/gestion-pizzas" class="admin-link">Pizzas</router-link>
-      <router-link to="/gestion-restaurants" class="admin-link">Restaurants</router-link>
-      <router-link to="/gestion-orders" class="admin-link">Commandes</router-link>
-    </nav>
-
-    <!-- PAGE COURANTE -->
->>>>>>> 509f02c2044908ef1fcb89275c7819e564f4996f
+    <!-- PAGE CONTENT -->
     <main>
       <router-view />
     </main>
@@ -52,161 +36,49 @@
 </template>
 
 <script setup>
-<<<<<<< HEAD
-import { ref, onMounted } from "vue";
-import { useRouter } from "vue-router";
+import { ref, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
 
-const router = useRouter();
-const user = ref(null);
+const router = useRouter()
+const user = ref(null)
+
+function refreshUser() {
+  const userData = localStorage.getItem('user')
+  user.value = userData ? JSON.parse(userData) : null
+}
 
 onMounted(() => {
-  const userData = localStorage.getItem("user");
-  if (userData) {
-    user.value = JSON.parse(userData);
-  }
-});
+  refreshUser()
+  window.addEventListener('auth-changed', refreshUser)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('auth-changed', refreshUser)
+})
 
 function logout() {
-  localStorage.removeItem("token");
-  localStorage.removeItem("user");
-  user.value = null;
-  router.push("/");
+  localStorage.removeItem('token')
+  localStorage.removeItem('user')
+  refreshUser()
+  // dispatch event so other components know
+  window.dispatchEvent(new CustomEvent('auth-changed'))
+  router.push('/')
 }
 </script>
 
 <style>
-body {
-  margin: 0;
-  font-family: Georgia, serif;
-}
-
-#app {
-  min-height: 100vh;
-}
-
-/* ✅ NAVBAR FIXE ET PROPRE */
-.navbar {
-  background: #fbdc7c;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* GROUPES */
-.nav-left,
-.nav-right {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-/* LIENS */
-.navbar a {
-  color: #5c3b00;
-  font-weight: bold;
-  text-decoration: none;
-=======
-// pas de logique ici
-</script>
-
-<style src="./assets/admin.css"></style>
-
-
-<style>
-body {
-  margin: 0;
-  font-family: "Georgia", serif;
-}
-
-#app {
-  min-height: 100vh;
-  background: #ffffff;
-}
-
-/* NAVBAR */
-.navbar {
-  background-color: #fbdc7c;
-  padding: 15px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  font-size: 18px;
-  border-bottom: 2px solid #e1c25a;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #5c3b00;
-  font-weight: bold;
->>>>>>> 509f02c2044908ef1fcb89275c7819e564f4996f
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-<<<<<<< HEAD
-/* USER SECTION */
-.user-section {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.user-name {
-  color: #5c3b00;
-  font-weight: bold;
-}
-
-/* ADMIN */
-.admin-label {
-  color: #8f2e2e;
-  font-weight: bold;
-  background: #fff5e6;
-  padding: 5px 10px;
-  border-radius: 3px;
-}
-
-.admin-link {
-  color: #8f2e2e;
-  font-weight: bold;
-}
-
-/* BUTTONS */
-.login-link,
-.logout-btn {
-  padding: 8px 15px;
-  background: #8f2e2e;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.login-link:hover,
-.logout-btn:hover {
-  background: #6b2323;
-=======
-/* ADMIN */
-.admin-title {
-  margin-left: 30px;
-  margin-right: 10px;
-  color: #8f2e2e;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.admin-link {
-  color: #8f2e2e !important;
->>>>>>> 509f02c2044908ef1fcb89275c7819e564f4996f
-}
-
-main {
-  padding: 20px;
-}
+body { margin: 0; font-family: Avenir, Helvetica, Arial, sans-serif; }
+#app { min-height: 100vh; }
+.navbar { background: #fbdc7c; padding: 12px 18px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+.nav-left, .nav-right { display:flex; gap:18px; align-items:center }
+.navbar a { color:#5c3b00; font-weight:600; text-decoration:none }
+.navbar a:hover { text-decoration:underline }
+.user-section { display:flex; gap:12px; align-items:center }
+.user-name { color:#5c3b00; font-weight:700 }
+.admin-label { color:#8f2e2e; font-weight:700; background:#fff5e6; padding:4px 8px; border-radius:3px }
+.admin-link { color:#8f2e2e; font-weight:700; margin-right:8px }
+.admin-links { display:flex; gap:8px; align-items:center }
+.login-link, .logout-btn { padding:7px 14px; background:#8f2e2e; color:#fff; border-radius:6px; text-decoration:none; border:none; cursor:pointer; font-weight:700 }
+.login-link:hover, .logout-btn:hover { background:#6b2323 }
+main { padding:18px }
 </style>
