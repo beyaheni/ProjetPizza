@@ -1,0 +1,14 @@
+[
+  { "id": 101, "name": "Seijitsu Pizza", "address": "123 Rue de Rivoli", "city": "Paris", "rating": 4.7 },
+  { "id": 102, "name": "Pizza della Nonna", "address": "45 Rue de la Paix", "city": "Lyon", "rating": 4.5 },
+  { "id": 103, "name": "Bella Napoli", "address": "78 Boulevard Longchamp", "city": "Marseille", "rating": 4.3 },
+  { "id": 104, "name": "La Fornata", "address": "89 Rue Alsace-Lorraine", "city": "Toulouse", "rating": 4.6 },
+  { "id": 105, "name": "Corte dei Sapori", "address": "12 Promenade des Anglais", "city": "Nice", "rating": 4.4 },
+  { "id": 106, "name": "Massa e Farina", "address": "56 Rue Sainte-Catherine", "city": "Bordeaux", "rating": 4.2 },
+  { "id": 107, "name": "Il Forno Rosso", "address": "34 Rue Crébillon", "city": "Nantes", "rating": 4.1 },
+  { "id": 108, "name": "Via Roma", "address": "67 Grand Rue", "city": "Strasbourg", "rating": 4.5 },
+  { "id": 109, "name": "Trastevere", "address": "90 Rue de la Comédie", "city": "Montpellier", "rating": 4.0 },
+  { "id": 110, "name": "Piazza Grande", "address": "23 Rue de Béthune", "city": "Lille", "rating": 4.6 },
+  { "id": 111, "name": "O Sole Mio", "address": "41 Rue Saint-Yves", "city": "Rennes", "rating": 4.3 },
+  { "id": 112, "name": "La Pala Gourmet", "address": "55 Rue de la République", "city": "Grenoble", "rating": 4.2 }
+]

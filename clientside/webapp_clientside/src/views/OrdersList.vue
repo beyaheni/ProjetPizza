@@ -1,73 +1,91 @@
 <template>
-  <div class="container">
-    <h1>Commandes</h1>
-
-    <div v-if="loading">Chargement…</div>
-    <div v-else-if="error" class="err">Erreur : {{ error }}</div>
-
-    <table v-else>
-      <thead>
-        <tr>
-          <th>N°</th>
-          <th>Client</th>
-          <th>Articles</th>
-          <th>Total (€)</th>
-          <th>Statut</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="o in orders" :key="o.id">
-          <td>{{ o.id }}</td>
-          <td>{{ o.customer }}</td>
-          <td>{{ o.items }}</td>
-          <td>{{ o.total.toFixed(2) }}</td>
-          <td>{{ o.status }}</td>
-        </tr>
-      </tbody>
-    </table>
+  <div>
+    <h1>My Orders</h1>
+    <div v-if="error">{{ error }}</div>
+    <div v-else class="orders-list">
+      <div v-for="order in orders" :key="order.id" class="order-card">
+        <div class="order-header">
+          <h3>Order #{{ order.id }}</h3>
+          <span :class="['status', order.status.toLowerCase()]">{{ order.status }}</span>
+        </div>
+        <p><strong>Customer:</strong> {{ order.customer }}</p>
+        <p><strong>Items:</strong> {{ order.items }}</p>
+        <p v-if="order.total"><strong>Total:</strong> ${{ order.total }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { getOrders } from "../services/api.js";
+
 export default {
-  name: 'OrdersList',
   data() {
     return {
       orders: [],
-      loading: true,
-      error: null
-    }
+      error: ""
+    };
   },
-  mounted() {
-    fetch('/data/orders.json')
-      .then(res => {
-        if (!res.ok) throw new Error('HTTP ' + res.status)
-        return res.json()
-      })
-      .then(data => (this.orders = data))
-      .catch(err => (this.error = err.message))
-      .finally(() => (this.loading = false))
+  async mounted() {
+    try {
+      this.orders = await getOrders();
+    } catch (err) {
+      this.error = "Unable to load orders.";
+    }
   }
-}
+};
 </script>
 
 <style scoped>
-.container {
-  max-width: 900px;
-  margin: 2rem auto;
+.orders-list {
+  display: grid;
+  gap: 15px;
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
+
+.order-card {
+  border: 2px solid #fbdc7c;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-th, td {
-  padding: .6rem;
-  border-bottom: 1px solid #eee;
-  text-align: left;
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
-th {
+
+.order-header h3 {
+  margin: 0;
+  color: #5c3b00;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.status.preparing {
   background: #fff3cd;
+  color: #856404;
 }
-.err { color: #c00; margin: 1rem 0; }
+
+.status.delivered {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.on\ the\ way {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.status.pending {
+  background: #e2e3e5;
+  color: #383d41;
+}
 </style>

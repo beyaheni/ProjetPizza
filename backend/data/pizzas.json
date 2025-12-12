@@ -1,0 +1,151 @@
+[
+  {
+    "id": 1,
+    "name": "Margherita",
+    "price": 8.5,
+    "ingredients": [
+      "mozzarella",
+      "tomato",
+      "basil"
+    ],
+    "vegetarian": true
+  },
+  {
+    "id": 2,
+    "name": "Diavola",
+    "price": 10,
+    "ingredients": [
+      "mozzarella",
+      "tomato",
+      "spicy salami"
+    ],
+    "vegetarian": false
+  },
+  {
+    "id": 3,
+    "name": "Quattro Formaggi",
+    "price": 11.5,
+    "ingredients": [
+      "mozzarella",
+      "gorgonzola",
+      "parmigiano",
+      "fontina"
+    ],
+    "vegetarian": true
+  },
+  {
+    "id": 4,
+    "name": "Regina",
+    "price": 11,
+    "ingredients": [
+      "mozzarella",
+      "tomato",
+      "ham",
+      "mushrooms"
+    ],
+    "vegetarian": false
+  },
+  {
+    "id": 5,
+    "name": "Vegetariana",
+    "price": 10.5,
+    "ingredients": [
+      "mozzarella",
+      "tomato",
+      "peppers",
+      "onion",
+      "olives",
+      "mushrooms"
+    ],
+    "vegetarian": true
+  },
+  {
+    "id": 6,
+    "name": "Parma Rucola",
+    "price": 12.5,
+    "ingredients": [
+      "mozzarella",
+      "tomato",
+      "parma ham",
+      "rocket",
+      "parmigiano"
+    ],
+    "vegetarian": false
+  },
+  {
+    "id": 7,
+    "name": "Hawaïenne",
+    "price": 10.9,
+    "ingredients": [
+      "mozzarella",
+      "tomato",
+      "ham",
+      "pineapple"
+    ],
+    "vegetarian": false
+  },
+  {
+    "id": 8,
+    "name": "Capricciosa",
+    "price": 12,
+    "ingredients": [
+      "mozzarella",
+      "tomato",
+      "artichokes",
+      "ham",
+      "olives",
+      "mushrooms"
+    ],
+    "vegetarian": false
+  },
+  {
+    "id": 9,
+    "name": "Bufalina",
+    "price": 12.8,
+    "ingredients": [
+      "buffalo mozzarella",
+      "tomato",
+      "basil",
+      "olive oil"
+    ],
+    "vegetarian": true
+  },
+  {
+    "id": 10,
+    "name": "Truffe Blanche",
+    "price": 14.5,
+    "ingredients": [
+      "mozzarella",
+      "cream",
+      "mushrooms",
+      "white truffle oil"
+    ],
+    "vegetarian": true
+  },
+  {
+    "id": 11,
+    "name": "Calzone Classico",
+    "price": 12.2,
+    "ingredients": [
+      "mozzarella",
+      "tomato",
+      "ham",
+      "mushrooms",
+      "ricotta"
+    ],
+    "vegetarian": false
+  },
+  {
+    "id": 12,
+    "name": "Piccante",
+    "price": 11.9,
+    "ingredients": [
+      "mozzarella",
+      "tomato",
+      "nduja",
+      "chili",
+      "red onion"
+    ],
+    "vegetarian": false
+  }
+]

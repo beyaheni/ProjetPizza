@@ -1,0 +1,39 @@
+[
+  {
+    "id": "ORD-0001",
+    "customer": "Alice",
+    "items": 3,
+    "total": 29.5,
+    "status": "Preparing"
+  },
+  {
+    "id": "ORD-0002",
+    "customer": "Bob",
+    "items": 2,
+    "total": 21,
+    "status": "Delivered"
+  },
+  {
+    "id": "ORD-0003",
+    "customer": "Charlie",
+    "items": 1,
+    "total": 11.5,
+    "status": "On the way"
+  },
+  {
+    "id": 1765506430023,
+    "customer": "user@pizza.com",
+    "items": "Margherita, Diavola",
+    "status": "pending",
+    "total": 18.5,
+    "date": "2025-12-12T02:27:10.017Z"
+  },
+  {
+    "id": 1765506431281,
+    "customer": "user@pizza.com",
+    "items": "Margherita, Diavola",
+    "status": "pending",
+    "total": 18.5,
+    "date": "2025-12-12T02:27:11.278Z"
+  }
+]

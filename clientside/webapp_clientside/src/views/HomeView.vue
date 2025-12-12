@@ -1,25 +1,37 @@
 <script setup>
+import { useRouter } from 'vue-router'
 import pizzaUrl from '@/assets/pizza.png' 
 import pizzaMargherita from '@/assets/pizzaMargherita.jpg'
 import pizza4Fromages from '@/assets/pizza4fromages.png'
 import pizzaReine from '@/assets/pizzareine.png'
 
+const router = useRouter()
 
-// fausses données pour la section "Nos Pizzas"
+const orderNow = () => {
+  const user = localStorage.getItem("user")
+  if (!user) {
+    router.push("/login")
+  } else {
+    router.push("/order-create")
+  }
+}
+
+
+// Sample data for "Our Pizzas" section
 const pizzas = [
   {
     name: 'Margherita',
-    description: 'Tomate, mozzarella, basilic frais.',
+    description: 'Tomato, mozzarella, fresh basil.',
     image: pizzaMargherita,
   },
   {
-    name: '4 Fromages',
-    description: 'Mozzarella, gorgonzola, parmesan, chèvre.',
+    name: '4 Cheeses',
+    description: 'Mozzarella, gorgonzola, parmesan, goat cheese.',
     image: pizza4Fromages,
   },
   {
-    name: 'Reine',
-    description: 'Jambon, champignons, olives noires.',
+    name: 'Queen',
+    description: 'Ham, mushrooms, black olives.',
     image: pizzaReine,
   },
 ]
@@ -30,12 +42,12 @@ const pizzas = [
     <!-- HERO -->
     <section class="hero">
       <div class="hero-text">
-        <h1>🍕 Bienvenue chez ProjetPizza 🍕</h1>
+        <h1>🍕 Welcome to ProjetPizza 🍕</h1>
         <p>
-          Dégustez nos pizzas artisanales, préparées avec amour et cuites dans un vrai four à bois.
-          Découvrez notre sélection unique, directement depuis votre navigateur !
+          Enjoy our artisanal pizzas, prepared with love and baked in a true wood-fired oven.
+          Discover our unique selection, right from your browser!
         </p>
-        <button class="order-btn">Commander maintenant</button>
+        <button class="order-btn" @click="orderNow">Order Now</button>
       </div>
 
       <div class="hero-img">
@@ -45,7 +57,7 @@ const pizzas = [
 
     <!-- MENU -->
     <section class="menu">
-      <h2>Nos Pizzas Favorites</h2>
+      <h2>Our Favorite Pizzas</h2>
       <div class="pizzas">
         <div class="pizza-card" v-for="p in pizzas" :key="p.name">
           <img :src="p.image" :alt="p.name" />
